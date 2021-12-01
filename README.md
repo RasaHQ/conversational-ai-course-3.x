@@ -1,2 +1,2 @@
-# conversationl-ai-course-3.x
+# conversational-ai-course-3.x
 Containers code for the learning center course.
