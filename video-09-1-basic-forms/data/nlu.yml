@@ -1,0 +1,124 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - hello world
+    - hi there
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thanks, goodbye
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - /affirm
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: stop
+  examples: |
+    - stop
+    - nevermind
+    - please stop
+    - i want to stop
+    - stop the form
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: buy_pizza
+  examples: |
+    - i'd like to buy a pizza
+    - i want a pizza
+    - can i buy a pizza
+    - I'm interested in a savory round flattened bread of Italian origin
+    - i want to buy a pizza
+- intent: inform
+  examples: |
+    - i'd like a [large](pizza_size) pizza
+    - i want to order a [xl](pizza_size) [hawai](pizza_type) pizza
+    - [medium](pizza_size) pizza
+    - [xl](pizza_size)
+    - [small](pizza_size)
+    - [s](pizza_size)
+    - [pepperoni](pizza_type)
+    - give me a [mozerella](pizza_type) pizza
+    - [hawaii](pizza_type) pizza
+    - [smol](pizza_size)
+    - [hawaii](pizza_type)
+    - i want a [large](pizza_size) pizza
+    - [mozzarella](pizza_type)
+    - [hawai](pizza_type)
+    - [veggie](pizza_type)
+    - [fungi](pizza_type)
+    - i want a [large](pizza_size) pizza
+    - [vegggie](pizza_type)
+    - [veggie](pizza_type)

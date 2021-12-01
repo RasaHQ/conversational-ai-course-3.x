@@ -1,0 +1,26 @@
+version: "2.0"
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Tell the time
+  steps:
+  - intent: inquire_time
+  - action: action_tell_time
+
+- rule: Where I live intent
+  steps:
+  - intent: where_i_live
+  - action: action_remember_where
+
+- rule: Time Difference Intent
+  steps:
+  - intent: inquire_time_difference
+  - action: action_time_difference

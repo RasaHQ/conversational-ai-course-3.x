@@ -1,0 +1,18 @@
+marker_start_end_pizza_form:
+  seq:
+    - intent: buy_pizza
+    - action: utter_submit
+
+marker_pizza_size_not_set_immediately:
+  seq:
+    - intent: buy_pizza
+    - not:
+      - slot_was_set: pizza_size
+    - slot_was_set: pizza_size
+
+marker_pizza_type_not_set_immediately:
+  seq:
+    - intent: buy_pizza
+    - not:
+      - slot_was_set: pizza_type
+    - slot_was_set: pizza_type

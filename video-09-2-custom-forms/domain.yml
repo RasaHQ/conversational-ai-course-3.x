@@ -1,0 +1,92 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- buy_pizza
+- greet
+- goodbye
+- inform
+- affirm
+- stop
+- bot_challenge
+- buy_fancy_pizza
+- deny
+- mood_great
+- mood_unhappy
+- request_fancy_form
+- request_pizza_form
+entities:
+- pizza_size
+- pizza_type
+forms:
+  simple_pizza_form:
+    required_slots:
+    - pizza_size
+    - pizza_type
+  fancy_pizza_form:
+    required_slots:
+    - vegetarian
+    - pizza_size
+    - pizza_type
+slots:
+  pizza_size:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: pizza_size
+      conditions:
+      - active_loop: pizza_form
+        requested_slot: pizza_size
+  pizza_type:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: pizza_type
+  vegetarian:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: from_intent
+      value: true
+      intent: affirm
+    - type: from_intent
+      value: false
+      intent: deny
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_submit:
+  - text: I will now order a pizza for you!
+  utter_pizza_slots:
+  - text: I will order a {pizza_size} {pizza_type} pizza.
+  utter_ask_continue:
+  - text: Are you sure you want to stop the form?
+  utter_ask_pizza_size:
+  - text: What size would you like your pizza to be?
+  utter_ask_pizza_type:
+  - text: What kind of pizza would you like to buy?
+actions:
+- action_ask_pizza_type
+- action_ask_vegetarian
+- utter_ask_continue
+- utter_goodbye
+- utter_greet
+- utter_iamabot
+- utter_pizza_slots
+- utter_submit
+- validate_fancy_pizza_form
+- validate_simple_pizza_form
