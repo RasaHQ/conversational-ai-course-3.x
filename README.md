@@ -1,2 +1,3 @@
-# conversational-ai-course-3.x
-Containers code for the learning center course.
+# Conversational AI with Rasa 3.x
+
+Contains code for the learning center course.
