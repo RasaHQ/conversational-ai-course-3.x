@@ -37,8 +37,10 @@ slots:
     - type: from_entity
       entity: pizza_size
       conditions:
-      - active_loop: pizza_form
+      - active_loop: simple_pizza_form
         requested_slot: pizza_size
+      - active_loop: fancy_pizza_form
+        requested_slot: pizza_size  
   pizza_type:
     type: text
     influence_conversation: true
